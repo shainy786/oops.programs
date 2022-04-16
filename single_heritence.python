@@ -1,0 +1,17 @@
+class base :
+       def __init__(self,coursename ,fees,duration):
+           self.coursename=coursename
+           self.fees=fees
+           self.duration=duration
+       def view (self):
+           print(self.coursename,self.fees,self.duration)
+class Child(base):
+     def __init__(self,coursename ,fees,duration):
+          base.__init__(self,coursename ,fees,duration)
+          self.addresss="ameerpet,hyderabad."
+     def view (self):
+         print(f"coursetype is {self.coursename} ,fees is {self.fees}, duration of course is  {self.duration} and address  at {self.addresss}")
+coursetype=Child("python","7500","2mnts")
+coursetype.view()
+
+#coursetype is python ,fees is 7500, duration of course is  2mnts and address  at ameerpet,hyderabad.
